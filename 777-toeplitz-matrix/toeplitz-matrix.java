@@ -1,0 +1,18 @@
+class Solution {
+    public boolean isToeplitzMatrix(int[][] matrix) {
+        
+        int row = matrix.length;
+        int col = matrix[0].length;
+        //boolean flag = false;
+
+        for(int i = 1; i < row; i++){
+            for(int j = 1; j < col; j++){
+                //int temp = matrix[0][0];
+                if(matrix[i][j] != matrix[i - 1][j - 1]){
+                    return false;
+                }
+            }
+        }
+        return true;
+    }
+}
